@@ -1,0 +1,52 @@
+$(document).ready(function() {
+    $("#s2-form").submit(function() {
+        var formID = $(this).attr('id');
+        var formNm = $('#' + formID);
+        $.ajax({
+            type: "POST",
+            url: 'https://turbo-fitness.by/wp-content/themes/fitness/send.php',
+            data: formNm.serialize(),
+            success: function(data) {
+                $('#payment-form-2').css("display", "flex");
+            }
+        });
+        return false;
+    });
+});
+$(document).ready(function() {
+    $("#s3-form").submit(function() {
+        var formID = $(this).attr('id');
+        var formNm = $('#' + formID);
+        $.ajax({
+            type: "POST",
+            url: 'https://turbo-fitness.by/wp-content/themes/fitness/send2.php',
+            data: formNm.serialize(),
+            success: function(data) {
+                $('#payment-form-2').css("display", "flex");
+            }
+        });
+        return false;
+    });
+});
+$(document).ready(function() {
+    $("#s4-form").submit(function() {
+        var formID = $(this).attr('id');
+        var formNm = $('#' + formID);
+        $.ajax({
+            type: "POST",
+            url: 'https://turbo-fitness.by/wp-content/themes/fitness/send3.php',
+            data: formNm.serialize(),
+            success: function(data) {
+                $('#payment-form-2').css("display", "flex");
+            }
+        });
+        return false;
+    });
+});
+
+$(document).ready(function() {
+    $("#book-form").submit(function() {
+        $('#payment-form-2').css("display", "flex");
+
+    });
+});

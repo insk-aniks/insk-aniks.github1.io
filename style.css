@@ -1,0 +1,503 @@
+/*The main wrapper*/
+#fep-wrapper
+{
+	margin: 0;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	max-height: 871px;
+	width: 530px;
+	/*background-color: white;*/ /*Uncomment this if you have dark background and can't see the text*/
+}
+
+/*Header styling*/
+#fep-header
+{
+	border: 1px solid #E7E7E7;
+	width: 100%;
+	color: #000000;
+}
+
+#fep-header strong
+{
+	color: #333;
+	font-size: 20px;
+}
+
+#fep-header .avatar
+{
+	border: none;
+	margin: 5px;
+	padding: 0;
+	vertical-align: top;
+}
+
+/*Content styling*/
+#fep-content
+{
+	height: auto;
+	width: 100%;
+	margin-top: -2px;
+	background: #e4bab0;
+	color: #000000;
+	overflow-y:auto;
+	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	z-index: 0;
+	box-shadow: 2px -2px 5px rgba(0,0,0,.1) !important;
+	padding: 10px;
+}
+#fep-content h2 {
+	font-size: 18px !important;
+	font-weight: 300 !important;
+}
+#fep-content::-webkit-scrollbar {
+    width: 12px;
+}
+#fep-content::-webkit-scrollbar-track {
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    background: rgba(255,255,255,0.9);
+}
+#fep-content::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    background: rgba(255,255,255,0.9);
+}
+#fep-content::-webkit-scrollbar-thumb {
+	background: rgba(250,192,176,0.8);
+    transition: all .5s;
+}
+#fep-content::-webkit-scrollbar-thumb:hover {
+	background: rgba(250,192,176,1);
+    transition: all .5s;
+}
+
+#fep-content p, #fep-content form
+{
+}
+
+#fep-content  hr
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+
+#fep-content .fep-form textarea
+{
+	width: 100%;
+	height: 100px !important;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	background: rgba(255,255,255,.8) !important;
+	border: 2px solid #fff;
+}
+#fep-content .fep-form textarea::-webkit-scrollbar {
+    width: 12px;
+}
+#fep-content .fep-form textarea::-webkit-scrollbar-track {
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    background: rgba(255,255,255,0.9);
+}
+#fep-content .fep-form textarea::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    background: rgba(255,255,255,0.9);
+}
+#fep-content .fep-form textarea::-webkit-scrollbar-thumb {
+	background: rgba(250,192,176,0.8);
+    transition: all .5s;
+}
+#fep-content .fep-form textarea::-webkit-scrollbar-thumb:hover {
+	background: rgba(250,192,176,1);
+    transition: all .5s;
+}
+#fep-content input[type=text]
+{
+	width: 90%;
+	/* min-width:250px; */
+	/* border: 1px solid #E7E7E7; */
+}
+
+#fep-content a
+{
+	color: #000;
+	text-decoration: underline;
+}
+
+
+#fep-content .avatar {
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+}
+
+/*Footer styling*/
+#fep-footer
+{
+	text-align: center;
+	font-size: 10px;
+	border: 1px solid #E7E7E7;
+	width: 100%;
+	color: #333;
+}
+
+#fep-footer a, #fep-footer a:hover, #fep-footer a:visited
+{
+	color: #333;
+	text-decoration: underline;
+}
+
+/*Auto-suggest*/
+#fep-result
+{
+	width:250px;
+	border: solid 1px #333;
+	display: none;
+	position: absolute;
+	background: #D3EEF5;
+}
+
+#fep-result ul, #fep-result li
+{
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	list-style: none;
+}
+
+#fep-result li
+{
+	border-top: solid 1px #333;
+}
+
+#fep-result li a
+{
+	display: block;
+	padding: 5px;
+	text-decoration: none;
+	color: #333;
+	font-weight: normal;
+}
+
+#fep-result li a:hover
+{
+	background: #333;
+	color: white;
+}
+.fep-message-table {
+	width: 100%;
+	display: flex;
+}
+.fep-table-row {
+	display: flex !important;
+	flex-direction: column;
+	padding-top: 10px;
+	margin-top: 10px;
+	border-top: 1px solid rgba(255,255,255,.5) !important;
+	position: relative;
+	transition: all .5s;
+	position: relative;
+}
+div.fep-table-row {
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+a.fep-table-row:before {
+	content: 'Читать диалог';
+	width: 100%;
+	height: calc(100% - 10px);
+	background: rgba(255,255,255,0);
+	transition: all .5s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	transition: all .5s;
+	font-weight: 500;
+	color: transparent;
+}
+a.fep-table-row:hover:before {
+	content: 'Читать диалог';
+	width: 100%;
+	height: calc(100% - 10px);
+	background: rgba(255,255,255,.9);
+	transition: all .5s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	transition: all .5s;
+	font-weight: 500;
+	color: #000;
+
+}
+.fep-table {display: table; width:100%; border-collapse: collapse;}
+.fep-table > div  {display: table-row;}
+.fep-table > div > div {display: table-cell;}
+.fep-table .fep-table-caption {display: table-caption; text-align:center;}
+
+.fep-action-table{ margin-bottom: 10px; }
+.fep-action-table > div > div { width:25%}
+.fep-action-table select { margin-top:10px;}
+
+.fep-table .fep-column-avatar, .fep-table .fep-column-fep-cb { display: none; vertical-align:middle; padding-right:10px;}
+.fep-table .fep-column-author, .fep-table .fep-column-date { display: flex; justify-content: space-between;min-width:150px;}
+.fep-table .fep-message-date { display:block; font-size: 14px;}
+.fep-table .fep-message-excerpt { opacity:0.3; }
+
+.fep-odd-even > div:nth-child(odd) {
+
+}
+
+.fep-odd-even > div:nth-child(even) {
+
+}
+
+.fep-unread-classp {
+}
+
+.fep-unread-class {
+    position:absolute;    /* This breaks the div from the normal HTML document. */
+	width: 100%;
+	height: calc(100% - 10px);
+    bottom: 0;
+	left: 0;
+    background-color: rgba(54,42,152,.2); /* you could use a background image if you'd like as well */
+    color:white;
+}
+.fep-unread-class:before {
+	content: 'Новое сообщение';
+	position: absolute;
+	right: 10px;
+	bottom: 0;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 500;
+}
+.fep-message-toggle-all {
+	cursor: pointer;
+}
+
+.fep-align-left{ text-align:left;}
+.fep-align-right{ text-align:right;}
+.fep-align-centre{ text-align:center;}
+.fep-hd {display:none;}
+.fep-strong{  }
+
+.fep-pagination{display:inline-block;padding-left:0;margin:20px 0;border-radius:6px}
+.fep-pagination>li{display:inline}
+.fep-pagination>li>a,.fep-pagination>li>span{position:relative;float:left;padding:7px 12px;line-height:1.42857143;text-decoration:none;color:#337ab7;background-color:#fff;border:1px solid #ddd;margin-left:-1px;font-size:12px}
+.fep-pagination>li:first-child>a,.fep-pagination>li:first-child>span{margin-left:0;border-bottom-left-radius:3px;border-top-left-radius:3px}
+.fep-pagination>li:last-child>a,.fep-pagination>li:last-child>span{border-bottom-right-radius:3px;border-top-right-radius:3px}
+.fep-pagination>li>a:hover,.fep-pagination>li>span:hover,.fep-pagination>li>a:focus,.fep-pagination>li>span:focus{color:#23527c;background-color:#eee;border-color:#ddd}
+.fep-pagination>.active>a,.fep-pagination>.active>span,.fep-pagination>.active>a:hover,.fep-pagination>.active>span:hover,.fep-pagination>.active>a:focus,.fep-pagination>.active>span:focus{z-index:2;color:#fff;background-color:#337ab7;border-color:#337ab7;cursor:default}
+.fep-pagination>.disabled>span,.fep-pagination>.disabled>span:hover,.fep-pagination>.disabled>span:focus,.fep-pagination>.disabled>a,.fep-pagination>.disabled>a:hover,.fep-pagination>.disabled>a:focus{color:#777;background-color:#fff;border-color:#ddd;cursor:not-allowed}
+
+.fep-loading-gif {
+    background:url('../images/loading.gif') no-repeat right center;
+	padding-right:16px;
+}
+
+.fep-message .fep-message-title-heading, .fep-per-message .fep-message-title {
+	width: 100%;
+	font-weight:bold;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.fep-message .fep-message-title-heading {
+	font-size: 20px;
+	display: none;
+}
+.fep-per-message .fep-message-title {
+	font-size: 16px;
+}
+.fep-per-message {
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	position: relative;
+}
+.fep-per-message:before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	background: rgba(255,255,255,.5);
+	left: 0;
+	bottom: 0;
+}
+.fep-per-message .fep-message-title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.fep-per-message .fep-message-title .date
+{
+	text-align:right;
+	width: 30%;
+	display:block;
+	font-weight: normal;
+	font-size:12px
+}
+.underline-span {
+	border-bottom: 1px dotted rgba(0,0,0,.5);
+}
+.fep-column {
+	align-items: center;
+	font-size: 15px;
+}
+.write-mess {
+	width: 180px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 14px;
+	border: 1px solid #fff !important;
+	transition: all .5s;
+	background: transparent;
+}
+.write-mess:hover {
+	transition: all .5s;
+	background: #fff;
+}
+.fep-message {
+	width: 100%;
+}
+#fep-reply-form {
+	width: 100%;
+}
+.fep-form {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.fep-label label {
+	font-size: 14px;
+	font-weight: 500;
+}
+#fep_upload {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	font-size: 14px;
+	align-items: center;
+}
+#fep_upload div input[type=file] {
+	width: 80%;
+	outline: none;
+}
+#fep_upload div input[type=file]:focus,
+#fep_upload div input[type=file]:active,
+#fep_upload div input[type=file]:target {
+	outline: none !important;
+	-webkit-appearance: none !important;
+}
+input[type=file]::-webkit-file-upload-button {
+	 -webkit-appearance: none;
+	 box-shadow: none;
+	 background: transparent;
+	 border: 2px solid #fff;
+	 cursor: pointer;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 width: 150px;
+	 height: 30px;
+	 color: #000;
+	 transition: all .5s;
+}
+input[type=file]::-webkit-file-upload-button:hover {
+	background: #fff;
+}
+input[type=file]::-webkit-file-upload-button:focus,
+input[type=file]::-webkit-file-upload-button:active,
+input[type=file]::-webkit-file-upload-button:target {
+	outline: none !important;
+	-webkit-appearance: none !important;
+}
+#fep_upload > div {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.fep-attachment-field {
+	width: auto;
+	color: #fff !important;
+}
+#fep-field {
+	display: flex;
+	flex-direction: column;
+}
+#fep-attachment-field-add {
+	font-size: 14px;
+	display: none !important;
+}
+.front-end-pm-form .fep-button {
+	width: 50%;
+	height: 40px;
+	margin-top: 10px;
+	box-shadow: none !important;
+	font-size: 14px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: transparent;
+	border: 2px solid #fff !important;
+	align-self: flex-end;
+	transition: all .5s;
+	text-transform: uppercase;
+}
+.front-end-pm-form .fep-button:hover {
+	background: #fff;
+}
+.front-end-pm-form {
+	width: 100%;
+}
+.fep-form-field {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.fep-form-field .fep-field {
+	width: 100%;
+}
+#fep-content .fep-field .input-text {
+	width: 100% !important;
+	height: 30px !important;
+	margin-top: 5px !important;
+	margin-bottom: 10px !important;
+	font-size: 14px !important;
+	background: rgba(255,255,255,.8) !important;
+	border: 2px solid #fff !important;
+}
+@media screen and (max-width: 480px) {
+.fep-table .fep-column-avatar { display:none;}
+.fep-action-table, .fep-action-table > div,.fep-action-table > div > div {display:block;}
+.fep-action-table > div > div {width:100%}
+#fep-menu .fep-button,.fep-button,.fep-button-active { width:100% }
+#fep-content input[type=text]{ width:100%}
+}
+@media screen and (max-width: 768px) {
+.fep-table .fep-message-excerpt { display:none;}
+}

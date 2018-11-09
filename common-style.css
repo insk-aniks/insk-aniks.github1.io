@@ -1,0 +1,89 @@
+/*Menu Styling*/
+#fep-menu
+{
+	color: #fff;
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	min-height: 40px;
+	font-size: 14px;
+	z-index: 1;
+}
+
+#fep-menu .fep-button,.fep-button,.fep-button-active {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color:#000 !important;
+	font-size:17px;
+	background: transparent;
+	width: 275px;
+	text-decoration:none !important;
+	cursor: pointer;
+	transition: all .5s;
+	border: 2px solid #e4bab0 !important;
+	background: #fff;
+	box-shadow: inset 2px -2px 5px rgba(0,0,0,.1), 2px -2px 5px rgba(0,0,0,.1) !important;
+	font-weight: 300;
+}
+
+#fep-menu .fep-button:hover,.fep-button-active {
+	background:#e4bab0;
+	color: #000 !important;
+	font-size: 17px;
+	transition: all .5s;
+	box-shadow: 2px -2px 5px rgba(0,0,0,.1) !important;
+	z-index: 1;
+
+}
+.fep-button-active {
+	font-weight: 500;
+}
+#fep-menu .fep-button:hover {
+	background: rgba(250,192,176,.1);
+	box-shadow: none !important;
+}
+
+#fep-notification-bar
+{
+	color: black;
+	background-color: #e4bab0;
+	position: absolute;
+	border-color: #C00;
+	width: 100%;
+	text-align: center;
+	font-size: 12px;
+	font-weight: bold;
+	border-width: 1px;
+	border-style: solid;
+	padding: 0.6em;
+	margin: 15px 0;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+	z-index: 999;
+}
+.fep-font-red { color: #000;}
+
+/*Notify Styling*/
+.fep-error, .fep-success, .fep-wp-error
+{
+	color: #000;
+	width: 100%;
+	text-align: center;
+	font-size: 16px;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.fep-success
+{
+}
+.fep-wp-error
+{
+	text-align:left;
+}

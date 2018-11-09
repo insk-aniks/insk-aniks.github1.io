@@ -1,0 +1,652 @@
+/* START Вход и регистрация */
+.panel_lk_recall {
+	color:#333;
+    display: inline-block;			/*++Twenty16++*/
+    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+
+}
+.panel_lk_recall.pageform {
+    display: flex;
+	flex-direction: column;
+	/*margin-top: 20px;*/
+	/*padding-top: 7px;*/
+	/*border-top: 1px dotted #fff;*/
+}
+.panel_lk_recall.floatform{
+	display:none;
+	left: 50%;
+	margin-left: -160px;
+	position: absolute;
+	z-index: 9999;
+}
+.panel_lk_recall.floatform .close-popup {
+    display: none;
+}
+div.panel_lk_recall a:not(.close-popup) {
+	border: none;							/*++Twenty15++*/
+	box-shadow: none;						/*++Twenty16++*/
+    text-decoration: none;
+}
+div.panel_lk_recall .form-tab-rcl a {
+    color: #aaa;
+    display: block;
+    padding: 8px 0;
+}
+.panel_lk_recall .form-tab-rcl {
+	display: flex !important;
+	flex-direction: column;
+	font-size: 16px;
+    margin: 0;
+	overflow: visible;
+    width: 100%;
+}
+#remember-form-rcl {
+	display: none !important;
+}
+.panel_lk_recall.floatform .form-tab-rcl {
+	box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.5);
+}
+.panel_lk_recall .form_head {
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+}
+.panel_lk_recall .form-tab-rcl .form_head a {
+    border-bottom: 1px solid #ccc;
+    text-align:center;
+}
+.panel_lk_recall .form_reg,
+.panel_lk_recall .form_auth {
+    color: #fff;
+    display: flex;
+}
+.panel_lk_recall .form_active {
+}
+.panel_lk_recall .form-tab-rcl a.link-tab-rcl:hover {
+    color: #555;
+}
+.panel_lk_recall .form-block-rcl {
+    line-height: 1.4;
+    position: relative;
+}
+
+/* START общие для полей*/
+.panel_lk_recall .rcl-field-input select,
+.panel_lk_recall .form-tab-rcl  textarea,
+.panel_lk_recall .form-tab-rcl input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]) {
+    background: #F2F2F2;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    border-radius: 0;
+    box-sizing: border-box;
+    color: #303030;
+    display: block;
+    font-size: 15px;
+    font-weight: 300;
+    height: auto;
+    line-height: normal;
+    margin: 5px auto;
+    max-width: none;
+    outline: none;
+    text-transform: none;
+    width: 100%;
+}
+.panel_lk_recall .form-tab-rcl input:focus:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]) {
+    outline: none;
+}
+/* END общие для полей*/
+
+
+/* START корректировки для полей*/
+#remember-form-rcl .default-field input[type="text"],
+#login-form-rcl .default-field input[type="text"],
+#login-form-rcl .default-field input[type="password"],
+#register-form-rcl .default-field input[type="text"],
+#register-form-rcl .default-field input[type="password"],
+#register-form-rcl .default-field input[type="email"] {
+    padding: 10px 12px 10px 32px;
+}
+#register-form-rcl .form-block-rcl textarea {
+    padding: 3px 5px;
+}
+#register-form-rcl .form_extend .rcl-field-input select {
+    overflow: hidden;
+    padding: 6px 3px;
+}
+#register-form-rcl .form_extend input[type="text"],
+#register-form-rcl .form_extend input[type="email"],
+#register-form-rcl .form_extend input[type="url"],
+#register-form-rcl .form_extend input[type="tel"],
+#register-form-rcl .form_extend input[type="file"],
+#register-form-rcl .form_extend input[type="time"],
+#register-form-rcl .form_extend input[type="number"] {
+    padding: 10px 8px;
+}
+#register-form-rcl .form-block-rcl .type-file-input {
+    font-size: 10px;
+}
+#register-form-rcl .form-block-rcl .dynamic-value input {
+    float: left;
+}
+.panel_lk_recall .rcl-radio-box,
+.panel_lk_recall .rcl-checkbox-box {
+    display: block;
+}
+.panel_lk_recall form-tab-rcl .block-label {
+    font-weight: normal;
+    text-align:left;
+}
+/* END корректировки для полей*/
+
+.panel_lk_recall .form-tab-rcl input[type="submit"] {
+    border: none;
+    font-size: 16px;
+	margin: 0;
+	max-width: none;
+	outline: none;
+    padding: 10px;
+    text-transform: uppercase;
+    width: 100%;
+}
+.form-block-rcl.default-field {
+	width: 100%;
+}
+.form-block-rcl.default-field.margin-top {
+	margin-top: 7px;
+}
+.form-block-rcl.default-field .fa {
+    color: #538a9a;
+    left: 12px;
+    opacity: 0.4;
+    position: absolute;
+    top: 12px;
+    width: auto;
+}
+.panel_lk_recall input[type="text"]:focus + .fa,
+.panel_lk_recall input[type="email"]:focus + .fa,
+.panel_lk_recall input[type="password"]:focus + .fa {
+    opacity: 1;
+}
+.panel_lk_recall .form-block-rcl .required {
+    color: rgb(229, 57, 53);
+    font: bold 15px/1 Verdana,arial;
+	padding: 0;
+    position: absolute;
+    right: 12px;
+    top: 15px;
+}
+.form-tab-rcl .form-block-rcl a.link-remember-rcl {
+    float: right;
+    font-size: 12px;
+    margin: 3px 0;
+}
+.form-block-rcl.form_extend .form-block-rcl {
+    margin: 0 0 15px;
+}
+.panel_lk_recall .form-block-rcl label .required {
+    position: inherit;
+}
+
+.form_rmmbr a {
+    background: #e6e7e8;
+    float: left;
+    text-align: center;
+    width: 50%;
+}
+.form_auth,
+.form_head.form_rmmbr a:first-child {
+    box-sizing: border-box;
+}
+.form-tab-rcl .form-title {
+    display: block;
+    font-size: 20px;
+	margin: 0 0 7px;
+    text-align: center;
+}
+.form-block-rcl #passwordStrength {
+	max-width: 290px;
+    padding: 8px;
+    width: 150px;
+}
+.form-block-rcl #passwordStrength.strength2 {
+    width: 55%;
+}
+.form-block-rcl #passwordStrength.strength3 {
+    width: 60%;
+}
+.form-block-rcl #passwordStrength.strength4 {
+    width: 80%;
+}
+.form-block-rcl #passwordStrength.strength5 {
+    width: 100%;
+}
+.form-block-rcl #notice-chek-password{
+    margin-top: 10px;
+}
+.form-block-rcl .rcl-field-notice {
+    font-size: 13px;
+}
+.panel_lk_recall .form-block-rcl label a {
+    color: rgb(76, 140, 189);
+    display: inline;
+}
+.panel_lk_recall span.login-error a:hover,
+.panel_lk_recall .form-block-rcl label a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+.panel_lk_recall span.error a {
+    color: rgb(76, 140, 189);
+    font-size: 14px;
+}
+.panel_lk_recall .form-tab-rcl .login-error {
+    background: rgba(255,255,255,.8);
+	position: absolute;
+	width: 200px;
+	height: auto;
+	left: -207px;
+	z-index: 1;
+}
+.panel_lk_recall .form-tab-rcl .login-error a {
+	display: none;
+}
+.panel_lk_recall .form-tab-rcl .login-message {
+    background: rgba(255,255,255,.8);
+		position: absolute;
+		width: 200px;
+		height: auto;
+		left: -207px;
+		z-index: 1;
+}
+.panel_lk_recall .form-tab-rcl .login-error,
+.panel_lk_recall .form-tab-rcl .login-message {
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    font-size: 12px;
+    text-align: center;
+	border: 2px solid #ffa992;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.panel_lk_recall .form-tab-rcl .login-error strong {
+	font-size: 16px;
+}
+
+/* START панель управления */
+.widget .panel_lk_recall .form-tab-rcl {
+    margin: 3px auto;
+    width: 99%;
+}
+.panel_lk_recall .rcl-widget-buttons .rcl-widget-button {
+    margin: 0 0 0;
+    overflow: hidden;
+    padding: 0;
+}
+.panel_lk_recall .rcl-widget-buttons .recall-button {
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    line-height: .8;
+	width: 100%;
+	border: 1px solid #fff;
+	height: 37px;
+	font-weight: 500;
+	background: none;
+	text-transform: uppercase;
+	margin-bottom: 7px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding-left: 33px;
+    /*padding: 8px;*/
+	transition: all .5s;
+}
+.panel_lk_recall .rcl-widget-buttons .recall-button:hover {
+	border: 1px solid #ffc1b2;
+	transition: all .5s;
+	color: #ffc1b2;
+}
+.panel_lk_recall .rcl-widget-buttons .recall-button:hover span {
+	transition: all .5s;
+	color: #ffc1b2;
+}
+.panel_lk_recall .rcl-widget-buttons a.recall-button:hover {
+    color: #fff;
+}
+.panel_lk_recall .buttons a .fa,
+.panel_lk_recall .buttons a span {
+    vertical-align: middle;
+}
+.panel_lk_recall .username{
+	margin: 0 0 7px 33px;
+	letter-spacing: 1px;
+}
+.panel_lk_recall .author-avatar{
+	margin:0 5px 0 0;
+	float: left;
+	position: relative;
+	width: 67px;						/*++Twenty16++*/
+	display: none;
+}
+.panel_lk_recall .author-avatar a {
+	display: inline-block;
+    height: auto;
+    width: 100%;
+}
+.panel_lk_recall .author-avatar a img {
+    border-radius: 0;
+    float: left;
+    height: auto;
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+}
+/* END панель управления */
+/* END Вход и регистрация */
+
+#registerform .form-block-rcl{
+    margin-bottom: 15px;
+    position: relative;
+}
+#registerform .form-block-rcl label{
+    display:block;
+    margin-bottom:5px;
+}
+#registerform .form-block-rcl .required{
+    position: absolute;
+    left: -15px;
+    top: 5px;
+    color:red;
+    font-size: 20px;
+}
+#registerform .rcl-checkbox-box,
+#registerform .rcl-radio-box{
+    display: block;
+    padding: 3px 0 3px 20px;
+}
+#registerform .rcl-checkbox-box label,
+#registerform .rcl-radio-box label{
+    display:inline-block;
+}
+#registerform .form-block-rcl textarea,
+#registerform .form-block-rcl select,
+#registerform .form-block-rcl input:not([type="checkbox"]):not([type="radio"]){
+    padding: 10px;
+    width: 100%;
+}
+#registerform .form-block-rcl input[type="checkbox"],
+#registerform .form-block-rcl input[type="radio"]{
+
+}
+#registerform .form-block-rcl .login-error,
+#registerform .form-block-rcl .login-message {
+    display: block;
+    font-size: 12px;
+    margin: 5px 0;
+    padding: 8px 5px;
+    text-align: center;
+}
+#registerform .form-block-rcl .login-error {
+    background: rgb(255, 207, 207);
+}
+#registerform .form-block-rcl .login-message {
+    background: #bfffbd;
+}
+
+body.login {
+	background: linear-gradient(rgba(0, 0, 0, 0.13), rgba(0, 0, 0, 0.13)), linear-gradient(rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.32)), url(/wp-content/uploads/2017/08/bg-account.jpg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#login {
+	width: 320px;
+	margin-left: 1260px;
+	padding-top: 0;
+}
+#login h1 {
+	display: none;
+}
+.login #login_error, .login .message{
+	border-left: none;
+	background: none;
+	box-shadow: none;
+	font-size: 14px;
+	line-height: normal;
+	color: #fff;
+	padding: 0;
+	text-align: justify;
+}
+.login .message.reset-pass {
+	font-size: 20px;
+	color: #fff;
+}
+.login form {
+	background: none;
+	box-shadow: none;
+	color: #fff;
+	padding: 0;
+}
+.wp-pwd {
+	margin-top: 10px;
+}
+.user-pass1-wrap p label{
+	color: #fff;
+	font-size: 21px;
+	text-transform: uppercase;
+	letter-spacing: 3.3px;
+	padding-left: 33px;
+}
+#pass1-text {
+	border: none;
+	background: #ffa992 !important;
+	font-size: 21px;
+	color: #fff;
+	padding: 0;
+	padding-left: 33px;
+	height: 42px;
+}
+#pass-strength-result.short {
+	border: none;
+	background: rgba(0,128,0,.2);
+	color: #fff;
+	margin-top: 10px;
+	font-size: 17px;
+	height: 42px;
+	border: 2px solid #fff;
+	display: flex;
+	justify-content: left;
+	padding-left: 33px;
+	align-items: center;
+}
+#pass-strength-result.bad {
+	border: none;
+	background: rgba(0,128,0,.4);
+	color: #fff;
+	margin-top: 10px;
+	font-size: 17px;
+	height: 42px;
+	border: 2px solid #fff;
+	display: flex;
+	justify-content: left;
+	padding-left: 33px;
+	align-items: center;
+}
+#pass-strength-result.good {
+	border: none;
+	background: rgba(0,128,0,.6);
+	color: #fff;
+	margin-top: 10px;
+	font-size: 17px;
+	height: 42px;
+	border: 2px solid #fff;
+	display: flex;
+	justify-content: left;
+	padding-left: 33px;
+	align-items: center;
+}
+#pass-strength-result.strong {
+	border: none;
+	background: rgba(0,128,0,1);
+	color: #fff;
+	margin-top: 10px;
+	font-size: 17px;
+	height: 42px;
+	border: 2px solid #fff;
+	display: flex;
+	justify-content: left;
+	padding-left: 33px;
+	align-items: center;
+}
+.indicator-hint {
+	display: none;
+}
+#login form p.submit {
+	display: flex;
+	width: 100%;
+	justify-content: flex-start;
+}
+#wp-submit {
+	width: 135px;
+	height: 37px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 500;
+	font-size: 14px;
+	color: #fff;
+	text-transform: uppercase;
+	border: 1px solid #fff;
+	border-radius: 0;
+	padding: 0;
+	transition: all .5s;
+	background: none;
+	box-shadow: none;
+	text-shadow: none;
+}
+#wp-submit:hover {
+	border: 1px solid #ffa992;
+	color: #ffa992;
+	transition: all .5s;
+}
+.login #backtoblog {
+	display: none;
+}
+.login #nav {
+	margin-top: 15px;
+	padding: 0;
+}
+.login #nav a{
+	width: 134px;
+	height: 37px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 500;
+	font-size: 14px;
+	color: #fff;
+	text-transform: uppercase;
+	border: 1px solid #fff;
+	border-radius: 0;
+	padding: 0;
+	transition: all .5s;
+	background: none;
+	box-shadow: none;
+	text-shadow: none;
+	margin: 0;
+}
+.login #nav a:hover {
+	border: 1px solid #ffa992;
+	color: #ffa992;
+	transition: all .5s;
+}
+#lostpasswordform > p label {
+	color: #fff;
+}
+#lostpasswordform > p label input {
+	background: #ffa992;
+	color: #fff;
+	font-size: 17px;
+	height: 42px;
+	border: none;
+}
+#lostpasswordform p.submit input {
+	width: 100%;
+}
+#loginform > p label {
+	color: #fff;
+}
+#loginform > p label input {
+	background: #ffa992;
+	color: #fff;
+	font-size: 17px;
+	height: 42px;
+	border: none;
+}
+#loginform .forgetmenot {
+	margin-bottom: 20px;
+}
+#loginform .forgetmenot label input {
+	height: 16px;
+}
+input[type=checkbox]:checked:before {
+	color: #fff;
+}
+
+.login-action-resetpass #login {
+	display: flex;
+	flex-direction: column;
+}
+#enter-reset {
+	width: 134px;
+	height: 37px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 500;
+	font-size: 14px;
+	color: #fff;
+	text-transform: uppercase;
+	border: 1px solid #fff;
+	border-radius: 0;
+	padding: 0;
+	transition: all .5s;
+	background: none;
+	box-shadow: none;
+	text-shadow: none;
+	margin: 0;
+	text-decoration: none;
+	margin-top: 20px;
+}
+#enter-reset:hover {
+	border: 1px solid #ffa992;
+	color: #ffa992;
+	transition: all .5s;
+}
+@media screen and  (max-width:1359px){
+	body.login {
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(rgba(0, 0, 0, 0.13), rgba(0, 0, 0, 0.13)), linear-gradient(rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.32));
+	}
+	#login {
+		width: 290px;
+
+		margin-left: calc((100% - 290px)/2);
+	}
+}
+@media screen and  (min-width:1359px) and (max-width:1919px){
+	body.login {
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(rgba(0, 0, 0, 0.13), rgba(0, 0, 0, 0.13)), linear-gradient(rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.32));
+	}
+	#login {
+		margin-left: calc((100% - 320px)/2);
+	}
+}
