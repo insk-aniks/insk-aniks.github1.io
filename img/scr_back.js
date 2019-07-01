@@ -1,0 +1,1 @@
+$(document).ready(function(){window.history.pushState({page:1},"",window.location),window.onpopstate=function(o){location.replace(backLink)}});

